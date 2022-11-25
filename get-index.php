@@ -1,6 +1,9 @@
 <?php
 
 $dato = $_GET['dati'];
+$censura = $_GET['parola'];
+
+$sostituisce = str_replace($censura, '***', $dato);
 
 ?>
 <!DOCTYPE html>
@@ -12,10 +15,10 @@ $dato = $_GET['dati'];
     <title>GET</title>
 </head>
 <body>
-    <h1><?php echo "Hai inserito : $dato"?></h1>
+    <h1><?php echo "Paragrafo inserito : $dato"?></h1>
+    <h3>La sua lunghezza del paragrafo è di: <?php echo strlen($dato); ?></h3>
     <br>
-    <h2>La sua lunghezza è di : <?php echo strlen($dato); ?></h2>
-    <br>
-    <h3><?php echo str_replace($dato,"***",$dato);?></h3>
+    <h2><?php echo "Paragrafo censurato: $sostituisce"?></h2>
+    <h3>La sua lunghezza del paragrafo è di: <?php echo strlen($sostituisce ); ?></h3>
 </body>
 </html>

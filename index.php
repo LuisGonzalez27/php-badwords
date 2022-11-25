@@ -8,7 +8,10 @@
 </head>
 <body>
     <form action="get-index.php" method="GET">
+        <h1>Inserisca il suo paragrafo:</h1>
         <input type="text" name="dati">
+        <h2>Parola da censurare:</h2>
+        <input type="text" name="parola">
         <button type="submit">INVIA</button>
     </form>
     
